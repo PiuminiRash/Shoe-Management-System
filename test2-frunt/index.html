@@ -29,20 +29,66 @@
     </div>
 </nav>
 
-<section class="container-fluid position-relative d-flex m-0 p-0" style="height: 500vh;right: 0;left: 0;">
+<section class="container-fluid position-relative d-flex m-0 p-0" style="top:5%; right: 0;left: 0;">
 
-    <section id="dessec" class="container-fluid position-relative justify-content-center align-items-center bg-white" style="right: 0;left: 0;display: flex;">
-         <div class="row d-flex mt-5 col-12" style="height: 75%; width: 100%;">
-            <form class="row w-50 " role="" method="">
+    <section id="dessec"
+             class="container-fluid position-relative justify-content-center align-items-center"
+             style="right: 0; left: 0; display: flex; background-color: #ffffff;">
 
-                <div class="col-12 col-md-6 ">
-                    <input class="form-control me-2 mb-2 mb-lg-0 shadow-sm" type=""
+        <div class="row d-flex mt-5 col-12" style="height: 75%; width: 100%;">
+
+            <!-- Search Form -->
+            <form class="row w-50" role="search" method="GET">
+                <div class="col-12 col-md-6">
+                    <input class="form-control me-2 mb-2 mb-lg-0 shadow-sm custom-input"
+                           type="text"
                            placeholder="Admin Id / Name"
-                           aria-label="Search" id="txtSearchrol" style="height: 30px">
+                           aria-label="Search"
+                           id="txtSearchrol">
+                </div>
+                <div class="col-12 col-md-6 mt-2">
+                    <button type="submit" class="btn custom-btn">Search</button>
                 </div>
             </form>
-            <div class="col-12  shadow border border-5 rounded-5" style="background:background-size:cover; background-position: center;height: 70vh"></div>
+
+            <!-- Customers Display Box -->
+            <div class="col-12 shadow border border-5 rounded-5 mt-4"
+                 style="background-size: cover; background-position: center; height: 70vh;">
+            </div>
         </div>
+
+        <!-- Custom Styling -->
+        <style>
+            /* White background already applied */
+            #dessec {
+                background-color: #ffffff !important;
+            }
+
+            /* Purple button */
+            .custom-btn {
+                background-color: #800080 !important;
+                color: #ffffff !important;
+                border: none;
+                padding: 8px 14px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: 500;
+            }
+            .custom-btn:hover {
+                background-color: #5a005a !important;
+            }
+
+            /* Input styling */
+            .custom-input {
+                height: 38px;
+                border: 1px solid #800080;
+            }
+            .custom-input:focus {
+                border-color: #5a005a;
+                box-shadow: 0 0 4px rgba(128, 0, 128, 0.5);
+            }
+        </style>
+
     </section>
 
     <section id="cussec"
@@ -183,30 +229,28 @@
                 </form>
             </div>
         </div>
+
+        <style>
+            /* One creative color theme */
+            .btn-custom {
+                background-color: #6f42c1; /* purple theme */
+                color: white;
+                font-weight: 500;
+                border-radius: 10px;
+                padding: 6px 18px;
+                transition: 0.3s;
+            }
+            .btn-custom:hover {
+                background-color: #59359a;
+            }
+
+            /* Add spacing */
+            .form-control, .form-select {
+                margin-bottom: 10px;
+            }
+        </style>
+
     </section>
-
-    <style>
-        /* One creative color theme */
-        .btn-custom {
-            background-color: #6f42c1; /* purple theme */
-            color: white;
-            font-weight: 500;
-            border-radius: 10px;
-            padding: 6px 18px;
-            transition: 0.3s;
-        }
-        .btn-custom:hover {
-            background-color: #59359a;
-        }
-
-        /* Add spacing */
-        .form-control, .form-select {
-            margin-bottom: 10px;
-        }
-    </style>
-
-
-
 
     <section id="invsec" class="container-fluid h-100 bg-primary flex-column pt-5 align-items-center justify-content-center"  style="display: none">
         <div class="container mt-5">
@@ -349,32 +393,32 @@
 
     </section>
 
-    <section id="odsec" class="container-fluid h-100 bg-primary flex-column pt-5 align-items-center justify-content-center"  style="display: none">
+    <section id="odsec"
+             class="container-fluid h-100 flex-column pt-5 align-items-center justify-content-center"
+             style="display: none; background-color: #ffffff; color: #000000;">
+
         <div class="container-fluid px-2 mt-5">
             <div class="row gx-2">
-                <div class="col-12 col-md-4">
 
-                    <div class="rounded-3 p-3 pt-1 pb-1 border bg-dark-subtle m-0 shadow">
-                        <div class="row bg-light rounded-2 d-flex justify-content-center align-items-center shadow" style="height: 8vh">
-                            <h1 class="modal-title fs-6 text-center text-black" id="order-labal">Invoice
-                                Details</h1>
+                <!-- Invoice Details -->
+                <div class="col-12 col-md-4">
+                    <div class="rounded-3 p-3 pt-1 pb-1 border bg-white m-0 shadow-sm">
+                        <div class="row bg-white rounded-2 d-flex justify-content-center align-items-center shadow-sm" style="height: 8vh">
+                            <h1 class="modal-title fs-6 text-center text-black" id="order-labal">Invoice Details</h1>
                         </div>
 
-                        <form class="">
-
+                        <form>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="col-form-label col-form-label-sm">Order ID</label>
-                                        <input id="txtOrderId" type="text" class="form-control input-sm" placeholder="ID">
+                                        <input id="txtOrderId" type="text" class="form-control custom-input" placeholder="ID">
                                     </div>
-
-
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="col-form-label col-form-label-sm">Date</label>
-                                        <input id="txtDate" type="date" class="form-control" placeholder="Name">
+                                        <input id="txtDate" type="date" class="form-control custom-input">
                                     </div>
                                 </div>
                             </div>
@@ -383,7 +427,7 @@
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="col-form-label col-form-label-sm">Customer ID</label>
-                                        <select id="selCusId" class="form-select" aria-label="Default select example">
+                                        <select id="selCusId" class="form-select custom-input">
                                             <option></option>
                                         </select>
                                     </div>
@@ -391,7 +435,7 @@
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="col-form-label col-form-label-sm">Customer Name</label>
-                                        <input id="orderCusName" type="text" class="form-control" placeholder="">
+                                        <input id="orderCusName" type="text" class="form-control custom-input">
                                     </div>
                                 </div>
                             </div>
@@ -400,12 +444,12 @@
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="col-form-label col-form-label-sm">Cashier name</label>
-                                        <input id="Cashier-name" type="text" class="form-control" placeholder="">
+                                        <input id="Cashier-name" type="text" class="form-control custom-input">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <label class="col-form-label col-form-label-sm">User ID</label>
-                                    <select id="selusersId" class="form-select" aria-label="Default select example">
+                                    <select id="selusersId" class="form-select custom-input">
                                         <option></option>
                                     </select>
                                 </div>
@@ -414,28 +458,29 @@
                     </div>
                 </div>
 
+                <!-- Item Select -->
                 <div class="col-12 col-md-5">
-                    <div class="rounded-3 p-3 border bg-light shadow">
+                    <div class="rounded-3 p-3 border bg-white shadow-sm">
                         <div class="row rounded-2" style="height: 4vh">
                             <h1 class="modal-title fs-6 text-center text-black" id="order-labal2">Item Select</h1>
                         </div>
                     </div>
-                    <div class="rounded-3 p-3 border bg-dark-subtle shadow" style="height: 85.5%;">
+
+                    <div class="rounded-3 p-3 border bg-white shadow-sm" style="height: 85.5%;">
                         <form>
                             <div class="row">
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="col-form-label col-form-label-sm">Item ID</label>
-                                        <select id="selItemId" class="form-select" aria-label="Default select example">
+                                        <select id="selItemId" class="form-select custom-input">
                                             <option></option>
                                         </select>
                                     </div>
                                 </div>
-
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="col-form-label col-form-label-sm">Description</label>
-                                        <input id="orderItemDesc" type="text" class="form-control" placeholder="">
+                                        <input id="orderItemDesc" type="text" class="form-control custom-input">
                                     </div>
                                 </div>
                             </div>
@@ -444,13 +489,13 @@
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="col-form-label col-form-label-sm">Unit Price</label>
-                                        <input id="orderItemPrice" type="text" class="form-control" placeholder="">
+                                        <input id="orderItemPrice" type="text" class="form-control custom-input">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="col-form-label col-form-label-sm">Size</label>
-                                        <input contenteditable="false" id="size1" type="number" class="form-control" placeholder="">
+                                        <input id="size1" type="number" class="form-control custom-input">
                                     </div>
                                 </div>
                             </div>
@@ -458,42 +503,43 @@
                             <div class="row">
                                 <div class="col-6">
                                     <label class="col-form-label col-form-label-sm">QTY</label>
-                                    <input id="getQty" type="text" class="form-control" placeholder="">
+                                    <input id="getQty" type="text" class="form-control custom-input">
                                 </div>
                                 <div class="col-6">
                                     <label class="col-form-label col-form-label-sm">QTY</label>
-                                    <input contenteditable="false" id="handQty" type="number" class="form-control" placeholder="">
+                                    <input id="handQty" type="number" class="form-control custom-input">
                                 </div>
                             </div>
 
-                            <div class="row d-flex justify-content-end">
+                            <div class="row d-flex justify-content-end mt-2">
                                 <div class="col-3">
-                                    <button id="btnClear" type="button" class="btn btn-danger">Clear All</button>
+                                    <button id="btnClear" type="button" class="btn custom-btn">Clear All</button>
                                 </div>
                                 <div class="col-2">
-                                    <button id="btnAddOrder" type="button" class="btn btn-primary">Add</button>
+                                    <button id="btnAddOrder" type="button" class="btn custom-btn">Add</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
 
+                <!-- Summary -->
                 <div class="col-12 col-md-3">
-
-                <div class="rounded-3 p-3 pt-1 pb-1 border bg-dark-subtle h-100 shadow">
-                        <div class="row bg-light rounded-2 d-flex align-items-center shadow" style="height: 8vh">
-                            <h1 class="modal-title fs-6 text-center text-black" id="order-labal3">Summery</h1>
+                    <div class="rounded-3 p-3 pt-1 pb-1 border bg-white h-100 shadow-sm">
+                        <div class="row bg-white rounded-2 d-flex align-items-center shadow-sm" style="height: 8vh">
+                            <h1 class="modal-title fs-6 text-center text-black" id="order-labal3">Summary</h1>
                         </div>
+
                         <form class="mt-3">
                             <div class="row">
-                                <label class="text-warning d-flex">
-                                    <h4>Total:&nbsp;<h4 id="total" class="text-primary">&nbsp;0.00</h4></h4>
+                                <label class="d-flex">
+                                    <h4>Total:&nbsp;<h4 id="total">&nbsp;0.00</h4></h4>
                                 </label>
                             </div>
 
                             <div class="row">
-                                <label class="text-success d-flex">
-                                    <h4>Sub Total :&nbsp;<h4 id="subTotal" class="text-danger">&nbsp;0.00</h4></h4>
+                                <label class="d-flex">
+                                    <h4>Sub Total:&nbsp;<h4 id="subTotal">&nbsp;0.00</h4></h4>
                                 </label>
                             </div>
 
@@ -501,13 +547,13 @@
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="col-form-label col-form-label-sm">Cash</label>
-                                        <input id="txtCash" type="email" class="form-control" placeholder="">
+                                        <input id="txtCash" type="text" class="form-control custom-input">
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="mb-3">
                                         <label class="col-form-label col-form-label-sm">Point</label>
-                                        <input id="txtDiscount" type="number" class="form-control" placeholder="%">
+                                        <input id="txtDiscount" type="number" class="form-control custom-input" placeholder="%">
                                     </div>
                                 </div>
                             </div>
@@ -515,21 +561,21 @@
                             <div class="row">
                                 <div class="mb-3">
                                     <label class="col-form-label col-form-label-sm">Balance</label>
-                                    <input id="txtBalnce" type="email" class="form-control" placeholder="">
+                                    <input id="txtBalnce" type="text" class="form-control custom-input">
                                 </div>
                                 <div class="mb-3">
-                                    <label class="col-form-label col-form-label-sm">Methord</label>
-                                    <select class="btn btn-info dropdown-toggle md-2" type="button" id="testmethord" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <option><a class="dropdown-item" href="#">cash</a></option>
-                                        <option><a class="dropdown-item" href="#">card</a></option>
+                                    <label class="col-form-label col-form-label-sm">Method</label>
+                                    <select id="testmethord" class="form-select custom-input">
+                                        <option>Cash</option>
+                                        <option>Card</option>
                                     </select>
+                                </div>
                             </div>
 
                             <div class="row d-flex justify-content-end">
                                 <div class="col-3">
-                                    <button id="btnPlaceOrder" type="button" class="btn btn-primary">Save</button>
+                                    <button id="btnPlaceOrder" type="button" class="btn custom-btn">Save</button>
                                 </div>
-                            </div>
                             </div>
                         </form>
                     </div>
@@ -537,9 +583,10 @@
             </div>
         </div>
 
+        <!-- Order Table -->
         <div class="row d-flex overflow-auto h-auto col-lg-11 col-12 m-auto z-0 mt-2">
-            <table class="table table-striped table-hover border" id="order-table">
-                <thead class="table-bordered sticky-top table-info">
+            <table class="table table-bordered border-dark table-hover" id="order-table">
+                <thead class="sticky-top" style="background-color: #f8f9fa; color: #000000;">
                 <tr>
                     <th scope="col">Order Id</th>
                     <th scope="col">Item Code</th>
@@ -549,250 +596,334 @@
                     <th scope="col">Cus Name</th>
                     <th scope="col">QTY</th>
                     <th scope="col">Cashier name</th>
-                    <th scope="col">point </th>
+                    <th scope="col">Point</th>
                     <th scope="col">Description</th>
                     <th scope="col">Unit Price</th>
-                    <th scope="col">method</th>
+                    <th scope="col">Method</th>
                     <th scope="col">Purchase date</th>
                     <th scope="col">Total</th>
                 </tr>
                 </thead>
-                <tbody id="order-tbl-body">
-
-                </tbody>
+                <tbody id="order-tbl-body"></tbody>
             </table>
         </div>
+
+        <!-- Custom Styling -->
+        <style>
+            /* Purple Buttons */
+            .custom-btn {
+                background-color: #800080 !important;
+                color: #ffffff !important;
+                border: none;
+                padding: 8px 14px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: 500;
+            }
+            .custom-btn:hover {
+                background-color: #5a005a !important;
+            }
+
+            /* Input & Select Fields */
+            .custom-input {
+                border: 1px solid #000000 !important;
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+            .custom-input:focus {
+                border-color: #5a005a !important;
+                box-shadow: 0 0 4px rgba(128, 0, 128, 0.5) !important;
+            }
+
+            /* Table black & white */
+            #order-table th,
+            #order-table td {
+                color: #000000 !important;
+                background-color: #ffffff !important;
+            }
+            #order-table tbody tr:hover {
+                background-color: #f1f1f1 !important;
+            }
+        </style>
     </section>
 
-    <section id="supsec" class="container-fluid vh-100 bg-primary  flex-column pt-5 align-items-center justify-content-center"  style="display: none">
+    <section id="supsec"
+             class="container-fluid h-100 flex-column pt-5 align-items-center justify-content-center"
+             style="display: none; background-color: #ffffff; color: #000000;">
 
         <div class="modal-body">
-            <div class="container">
+            <div class="container-fluid px-5 mt-5">
                 <form>
-                    <div class="row">
-                            <div class="col-3">
-                                <input  class="form-control me-2 mb-2 mb-lg-0" type="" placeholder="Enter Description/Code"
-                                        aria-label="Search" id="txtSearchSupplier" style="width: 250px; height: 40px">
-                            </div>
-                            <div class="col-3">
-                                <select id="supplierSearch" class="form-select bg-info" aria-label="Default select example">
-                                    <option><a class="dropdown-item" href="#">Supplier Id</a></option>
-                                    <option><a class="dropdown-item" href="#">name</a></option>
-                                </select>
-                            </div>
-                    </div>
-                    <div class="row">
+                    <!-- Search -->
+                    <div class="row mb-3">
                         <div class="col-3">
-                            <label class="form-label">Suplier code</label>
-                            <input id="supp-id" type="text" class="form-control" placeholder="">
+                            <input class="form-control custom-input me-2 mb-2 mb-lg-0"
+                                   type="text" placeholder="Enter Description/Code"
+                                   aria-label="Search" id="txtSearchSupplier"
+                                   style="width: 250px; height: 40px">
                         </div>
                         <div class="col-3">
-                            <label class="form-label">Suplier name</label>
-                            <input id="supp-name" type="text" class="form-control" placeholder="">
-                        </div>
-                        <div class="col-3">
-                            <label class="form-label">Contact No1</label>
-                            <input id="num1" type="text" class="form-control" placeholder="">
-                        </div>
-                        <div class="col-3">
-                            <label class="form-label">Contact No2</label>
-                            <input id="num2" type="text" class="form-control" placeholder="">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-3">
-                            <label class="form-label">Building</label>
-                            <input id="address001" type="text" class="form-control" placeholder="">
-                        </div>
-                        <div class="col-3">
-                            <label class="form-label">Lane</label>
-                            <input id="address002" type="text" class="form-control" placeholder="">
-                        </div>
-                        <div class="col-2">
-                            <label class="form-label">Main city</label>
-                            <input id="address003" type="text" class="form-control" placeholder="">
-                        </div>
-                        <div class="col-2">
-                            <label class="form-label">Main state</label>
-                            <input id="address004" type="text" class="form-control" placeholder="">
-                        </div>
-                        <div class="col-2">
-                            <label class="form-label">postal code</label>
-                            <input id="address005" type="text" class="form-control" placeholder="">
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-3">
-                            <label class="form-label">Email</label>
-                            <input id="mail1" type="text" class="form-control" placeholder="">
-                        </div>
-                        <div class="col-3">
-                            <label class="form-label">Category</label>
-                            <select class="btn btn-info dropdown-toggle " type="button" id="supcotegory" data-bs-toggle="dropdown" aria-expanded="false">
-                                <option><a class="dropdown-item" href="#">Heel</a></option>
-                                <option><a class="dropdown-item" href="#">Flats</a></option>
-                                <option><a class="dropdown-item" href="#">Wedges</a></option>
-                                <option><a class="dropdown-item" href="#">Flip Flops</a></option>
-                                <option><a class="dropdown-item" href="#">Sandals</a></option>
-                                <option><a class="dropdown-item" href="#">Shoes</a></option>
-                                <option><a class="dropdown-item" href="#">Slippers</a></option>
+                            <select id="supplierSearch" class="form-select custom-input" aria-label="Supplier Search">
+                                <option value="id">Supplier Id</option>
+                                <option value="name">Name</option>
                             </select>
                         </div>
                     </div>
 
-                    <div>
-                        <button type="button" class="btn btn-primary" id="save-supplier">Save</button>
-                        <button type="button" class="btn btn-secondary" id="update-supplier">Update</button>
-                        <button type="button" class="btn btn-success" id="delete-supplier" >Delete</button>
-                        <button type="button" class="btn btn-success" id="getAllSupplier" >Get All</button>
-
+                    <!-- Supplier Info -->
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <label class="form-label">Supplier code</label>
+                            <input id="supp-id" type="text" class="form-control custom-input">
+                        </div>
+                        <div class="col-3">
+                            <label class="form-label">Supplier name</label>
+                            <input id="supp-name" type="text" class="form-control custom-input">
+                        </div>
+                        <div class="col-3">
+                            <label class="form-label">Contact No1</label>
+                            <input id="num1" type="text" class="form-control custom-input">
+                        </div>
+                        <div class="col-3">
+                            <label class="form-label">Contact No2</label>
+                            <input id="num2" type="text" class="form-control custom-input">
+                        </div>
                     </div>
+
+                    <!-- Address -->
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <label class="form-label">Building</label>
+                            <input id="address001" type="text" class="form-control custom-input">
+                        </div>
+                        <div class="col-3">
+                            <label class="form-label">Lane</label>
+                            <input id="address002" type="text" class="form-control custom-input">
+                        </div>
+                        <div class="col-2">
+                            <label class="form-label">Main city</label>
+                            <input id="address003" type="text" class="form-control custom-input">
+                        </div>
+                        <div class="col-2">
+                            <label class="form-label">Main state</label>
+                            <input id="address004" type="text" class="form-control custom-input">
+                        </div>
+                        <div class="col-2">
+                            <label class="form-label">Postal code</label>
+                            <input id="address005" type="text" class="form-control custom-input">
+                        </div>
+                    </div>
+
+                    <!-- Email & Category -->
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <label class="form-label">Email</label>
+                            <input id="mail1" type="email" class="form-control custom-input">
+                        </div>
+                        <div class="col-3">
+                            <label class="form-label">Category</label>
+                            <select id="supcotegory" class="form-select custom-input">
+                                <option value="heel">Heel</option>
+                                <option value="flats">Flats</option>
+                                <option value="wedges">Wedges</option>
+                                <option value="flipflops">Flip Flops</option>
+                                <option value="sandals">Sandals</option>
+                                <option value="shoes">Shoes</option>
+                                <option value="slippers">Slippers</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="mb-3">
+                        <button type="button" class="btn custom-btn" id="save-supplier">Save</button>
+                        <button type="button" class="btn custom-btn" id="update-supplier">Update</button>
+                        <button type="button" class="btn custom-btn" id="delete-supplier">Delete</button>
+                        <button type="button" class="btn custom-btn" id="getAllSupplier">Get All</button>
+                    </div>
+
+                    <!-- Supplier Table -->
                     <div class="mt-3">
-                        <div class="table-section" >
-                            <table class="table table-bordered border-primary table-hover" id="tblSupp">
-                                <thead class="table-dark">
+                        <div class="table-section">
+                            <table class="table table-bordered border-dark table-hover" id="tblSupp">
+                                <thead style="background-color: #f8f9fa; color: #000000;">
                                 <tr>
                                     <th scope="col">Code</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Category</th>
-                                    <th scope="col">Address </th>
+                                    <th scope="col">Address</th>
                                     <th scope="col">Contact1</th>
-                                    <th scope="col">Contact1</th>
+                                    <th scope="col">Contact2</th>
                                     <th scope="col">Email</th>
                                 </tr>
                                 </thead>
-                                <tbody id="Supplier-body">
-
-                                </tbody>
+                                <tbody id="Supplier-body"></tbody>
                             </table>
                         </div>
                     </div>
-
                 </form>
             </div>
         </div>
 
+        <style>
+            .custom-btn {
+                background-color: #800080 !important;
+                color: #fff !important;
+                border: none;
+                padding: 8px 14px;
+                border-radius: 6px;
+                font-weight: 500;
+                margin-right: 6px;
+            }
+            .custom-btn:hover { background-color: #5a005a !important; }
+
+            .custom-input {
+                border: 1px solid #000 !important;
+                background-color: #fff !important;
+                color: #000 !important;
+            }
+            .custom-input:focus {
+                border-color: #5a005a !important;
+                box-shadow: 0 0 4px rgba(128, 0, 128, 0.4) !important;
+            }
+
+            #tblSupp th, #tblSupp td {
+                color: #000 !important;
+                background-color: #fff !important;
+            }
+            #tblSupp tbody tr:hover { background-color: #f1f1f1 !important; }
+        </style>
 
     </section>
 
-    <section id="empsec" class="container-fluid h-100 bg-primary flex-column pt-5 align-items-center justify-content-center"  style="display: none">
-        <div class="modal-body">
-            <div class="container">
-                <form>
-<!--                    <div class="row">-->
-<!--                        <div class="col-6">-->
-<!--                            <input  class="form-control me-2 mb-2 mb-lg-0" type="" placeholder="Enter Description/Code"-->
-<!--                                    aria-label="Search" id="txtSearchEmployee" style="width: 250px; height: 40px">-->
-<!--                        </div>-->
-<!--                        <div class="col-6">-->
-<!--                            <select id="employeeSearch" class="form-select bg-info" aria-label="Default select example">-->
-<!--                                <option><a class="dropdown-item" href="#">Code</a></option>-->
-<!--                                <option><a class="dropdown-item" href="#">name</a></option>-->
-<!--                            </select>-->
-<!--                        </div>-->
+    <section id="empsec"
+             class="container-fluid h-100 flex-column pt-5 align-items-center justify-content-center"
+             style="display: none; background-color: #ffffff; color: #000000;">
 
-<!--                    </div>-->
-                    <div class="row">
+        <div class="modal-body">
+            <div class="container-fluid px-5 mt-5">
+                <form>
+
+                    <!-- Row 1 -->
+                    <div class="row g-3 mb-3">
                         <div class="col-3">
                             <label class="form-label">Employee code</label>
-                            <input id="emp-id" type="text" class="form-control" placeholder="">
+                            <input id="emp-id" type="text" class="form-control custom-input" placeholder="">
                         </div>
+
                         <div class="col-3">
-                            <label class="form-label">Suplier name</label>
-                            <input id="emp-name" type="text" class="form-control" placeholder="">
+                            <label class="form-label">Employee name</label>
+                            <input id="emp-name" type="text" class="form-control custom-input" placeholder="">
                         </div>
+
                         <div class="col-3">
                             <label class="form-label">States</label>
-                            <select class="btn btn-info dropdown-toggle md-2" type="button" id="texstates1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <option><a class="dropdown-item" href="#">low</a></option>
-                                <option><a class="dropdown-item" href="#">Galle</a></option>
+                            <select id="texstates1" class="form-select custom-input" aria-label="States">
+                                <option value="low">Low</option>
+                                <option value="galle">Galle</option>
                             </select>
                         </div>
+
                         <div class="col-3">
                             <label class="form-label">Designation</label>
-                            <input id="designation" type="text" class="form-control" placeholder="">
+                            <input id="designation" type="text" class="form-control custom-input" placeholder="">
                         </div>
                     </div>
-                    <div class="row">
+
+                    <!-- Row 2 -->
+                    <div class="row g-3 mb-3">
                         <div class="col-3">
                             <label class="form-label">Access Role</label>
-                            <input id="role" type="text" class="form-control" placeholder="">
+                            <input id="role" type="text" class="form-control custom-input" placeholder="">
                         </div>
                         <div class="col-3">
                             <label class="form-label">Attached Branch</label>
-                            <input id="branch" type="text" class="form-control" placeholder="">
+                            <input id="branch" type="text" class="form-control custom-input" placeholder="">
                         </div>
                         <div class="col-3">
                             <label class="form-label">Address1</label>
-                            <input id="address01" type="text" class="form-control" placeholder="">
+                            <input id="address01" type="text" class="form-control custom-input" placeholder="">
                         </div>
                         <div class="col-3">
                             <label class="form-label">Address2</label>
-                            <input id="address02" type="text" class="form-control" placeholder="">
+                            <input id="address02" type="text" class="form-control custom-input" placeholder="">
                         </div>
                     </div>
-                    <div class="row">
+
+                    <!-- Row 3 -->
+                    <div class="row g-3 mb-3">
                         <div class="col-3">
                             <label class="form-label">Address3</label>
-                            <input id="address03" type="text" class="form-control" placeholder="">
+                            <input id="address03" type="text" class="form-control custom-input" placeholder="">
                         </div>
                         <div class="col-3">
                             <label class="form-label">Address4</label>
-                            <input id="address04" type="text" class="form-control" placeholder="">
+                            <input id="address04" type="text" class="form-control custom-input" placeholder="">
                         </div>
                         <div class="col-3">
                             <label class="form-label">Address5</label>
-                            <input id="address05" type="text" class="form-control" placeholder="">
+                            <input id="address05" type="text" class="form-control custom-input" placeholder="">
                         </div>
                         <div class="col-3">
                             <label class="form-label">Email</label>
-                            <input id="mail01" type="text" class="form-control" placeholder="">
+                            <input id="mail01" type="email" class="form-control custom-input" placeholder="">
                         </div>
                     </div>
-                    <div class="row">
+
+                    <!-- Row 4 -->
+                    <div class="row g-3 mb-3">
                         <div class="col-3">
                             <label class="form-label">Contact No</label>
-                            <input id="num" type="text" class="form-control" placeholder="">
+                            <input id="num" type="text" class="form-control custom-input" placeholder="">
                         </div>
 
                         <div class="col-3">
                             <label class="form-label">Emergency Contact</label>
-                            <input id="emergency" type="text" class="form-control" placeholder="">
+                            <input id="emergency" type="text" class="form-control custom-input" placeholder="">
                         </div>
-                        <div class="col-3">
-                            <label for="profilePic" class="form-label">Employee Profile</label>
-                            <input type="file" id="profilepic" name="profilepic">
 
+                        <div class="col-3">
+                            <label for="profilepic" class="form-label">Employee Profile</label>
+                            <input type="file" id="profilepic" name="profilepic" class="form-control custom-file-input">
+                        </div>
+
+                        <div class="col-3">
+                            <!-- empty column for spacing (keeps layout consistent) -->
                         </div>
                     </div>
-                    <div class="row">
+
+                    <!-- Row 5: Dates & Gender -->
+                    <div class="row g-3 mb-3">
                         <div class="col-3">
                             <label class="col-form-label col-form-label-sm">Join Date</label>
-                            <input id="joindate" type="date" class="form-control" placeholder="Name" style="color: green; font-weight: 500;">
+                            <input id="joindate" type="date" class="form-control custom-input">
                         </div>
                         <div class="col-3">
                             <label class="col-form-label col-form-label-sm">DOB</label>
-                            <input id="emp-dob" type="date" class="form-control" placeholder="Name" style="color: green; font-weight: 500;">
+                            <input id="emp-dob" type="date" class="form-control custom-input">
                         </div>
                         <div class="col-3">
                             <label class="form-label">Gender</label>
-                            <select class="btn btn-info dropdown-toggle md-2" type="button" id="gender1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <option><a class="dropdown-item" href="#">Man</a></option>
-                                <option><a class="dropdown-item" href="#">Woman</a></option>
+                            <select id="gender1" class="form-select custom-input" aria-label="Gender">
+                                <option value="man">Man</option>
+                                <option value="woman">Woman</option>
                             </select>
                         </div>
+                        <div class="col-3"></div>
                     </div>
-                    <div>
-                        <button type="button" class="btn btn-primary" id="save-employee">Save</button>
-                        <button type="button" class="btn btn-secondary" id="update-employee">Update</button>
-                        <button type="button" class="btn btn-success" id="delete-employee" >Delete</button>
-                        <button type="button" class="btn btn-success" id="getAllEmployee" >Get All</button>
 
+                    <!-- Action Buttons -->
+                    <div class="mt-2 mb-3">
+                        <button type="button" class="btn custom-btn" id="save-employee">Save</button>
+                        <button type="button" class="btn custom-btn" id="update-employee">Update</button>
+                        <button type="button" class="btn custom-btn" id="delete-employee">Delete</button>
+                        <button type="button" class="btn custom-btn" id="getAllEmployee">Get All</button>
                     </div>
+
+                    <!-- Employee Table -->
                     <div class="row d-flex overflow-auto h-75 col-lg-10 col-12 m-auto z-0">
-                        <table class="table table-striped table-hover border" id="tblEmployee">
-                            <thead class="table-bordered sticky-top overflow-auto table-dark">
+                        <table class="table table-bordered border-dark table-hover" id="tblEmployee">
+                            <thead style="background-color: #f8f9fa; color: #000000;">
                             <tr>
                                 <th scope="col">Employee code</th>
                                 <th scope="col">Employee name</th>
@@ -804,17 +935,13 @@
                                 <th scope="col">DOB</th>
                                 <th scope="col">Join date</th>
                                 <th scope="col">Branch</th>
-                                <th scope="col">Address </th>
-                                <th scope="col">Countac num</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Contact num</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Emergency Contact</th>
-
-
-
                             </tr>
                             </thead>
-                            <tbody id="Employee-body">
-                            </tbody>
+                            <tbody id="Employee-body"></tbody>
                         </table>
                     </div>
 
@@ -822,6 +949,44 @@
             </div>
         </div>
 
+        <style>
+            /* Purple Buttons */
+            .custom-btn {
+                background-color: #800080 !important;
+                color: #ffffff !important;
+                border: none;
+                padding: 8px 14px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: 500;
+                margin-right: 6px;
+            }
+            .custom-btn:hover { background-color: #5a005a !important; }
+
+            /* Inputs & selects: black & white */
+            .custom-input {
+                border: 1px solid #000 !important;
+                background-color: #fff !important;
+                color: #000 !important;
+            }
+            .custom-input:focus {
+                outline: none !important;
+                border-color: #5a005a !important;
+                box-shadow: 0 0 4px rgba(128,0,128,0.12) !important;
+            }
+
+            /* file input */
+            .custom-file-input {
+                color: #000;
+            }
+
+            /* Table: black & white */
+            #tblEmployee th, #tblEmployee td {
+                color: #000 !important;
+                background-color: #fff !important;
+            }
+            #tblEmployee tbody tr:hover { background-color: #f1f1f1 !important; }
+        </style>
 
     </section>
 
